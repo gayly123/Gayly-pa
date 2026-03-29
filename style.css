@@ -1,0 +1,204 @@
+:root {
+    --primary-green: #e8f5e9;
+    --soft-green: #c8e6c9;
+    --accent-green: #81c784;
+    --white: #ffffff;
+    --text-color: #3e4a3e;
+    --card-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mali', cursive;
+    background-color: #f9fdf9;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    width: 100%;
+}
+
+.banner-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9);
+}
+
+.header-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    width: 100%;
+}
+
+.header-overlay h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.header-overlay p {
+    font-size: 1.5rem;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    justify-content: center;
+    margin-top: -80px;
+    padding-bottom: 40px;
+}
+
+.profile-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 40px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    width: 350px;
+    border: 8px solid var(--soft-green);
+    position: relative;
+}
+
+.profile-img-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: -100px auto 20px;
+    border: 8px solid var(--white);
+    box-shadow: var(--card-shadow);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    color: var(--accent-green);
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: #777;
+    font-size: 1.1rem;
+}
+
+/* Info Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.info-card {
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+.info-card-green {
+    background-color: var(--primary-green);
+    border: 3px dashed var(--accent-green);
+}
+
+.info-card-white {
+    background-color: var(--white);
+    border: 3px solid var(--soft-green);
+}
+
+.info-card h3 {
+    color: var(--accent-green);
+    margin-bottom: 20px;
+    border-bottom: 2px dotted var(--soft-green);
+    padding-bottom: 10px;
+}
+
+.info-card ul {
+    list-style: none;
+}
+
+.info-card ul li {
+    margin-bottom: 12px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-green);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--soft-green);
+    color: var(--text-color);
+}
+
+/* Message */
+.message {
+    max-width: 800px;
+    margin: 40px auto 80px;
+    padding: 0 20px;
+}
+
+.message-card {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 30px;
+    border: 3px solid var(--soft-green);
+    text-align: center;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--accent-green);
+}
+
+/* Footer */
+footer {
+    background-color: var(--soft-green);
+    color: var(--text-color);
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+    border-radius: 50px 50px 0 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .header-overlay h1 {
+        font-size: 2.5rem;
+    }
+    .profile-card {
+        width: 90%;
+    }
+}
